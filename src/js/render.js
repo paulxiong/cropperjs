@@ -1,4 +1,5 @@
 import {
+  ACTION_CROP,
   ACTION_ALL,
   ACTION_MOVE,
   CLASS_HIDDEN,
@@ -478,8 +479,10 @@ export default {
 
     if (options.movable && options.cropBoxMovable) {
       // Turn to move the canvas when the crop box is equal to the container
+      // setData(this.face, DATA_ACTION, cropBoxData.width >= containerData.width
+      //   && cropBoxData.height >= containerData.height ? ACTION_MOVE : ACTION_ALL);
       setData(this.face, DATA_ACTION, cropBoxData.width >= containerData.width
-        && cropBoxData.height >= containerData.height ? ACTION_MOVE : ACTION_ALL);
+        && cropBoxData.height >= containerData.height ? ACTION_MOVE : ACTION_CROP);
     }
 
     setStyle(this.cropBox, assign({

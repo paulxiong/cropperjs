@@ -7,11 +7,13 @@ import handlers from './handlers';
 import change from './change';
 import methods from './methods';
 import {
+  ACTION_CROP,
   ACTION_ALL,
   CLASS_HIDDEN,
   CLASS_HIDE,
   CLASS_INVISIBLE,
   CLASS_MOVE,
+  CLASS_CROP,
   DATA_ACTION,
   EVENT_READY,
   MIME_TYPE_JPEG,
@@ -370,8 +372,10 @@ class Cropper {
     }
 
     if (options.cropBoxMovable) {
-      addClass(face, CLASS_MOVE);
-      setData(face, DATA_ACTION, ACTION_ALL);
+      // addClass(face, CLASS_MOVE);
+      // setData(face, DATA_ACTION, ACTION_ALL);
+      addClass(face, CLASS_CROP); //this will make the moving icon (cross)
+      setData(face, DATA_ACTION, ACTION_CROP);
     }
 
     if (!options.cropBoxResizable) {
