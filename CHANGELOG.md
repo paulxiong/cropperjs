@@ -1,7 +1,9 @@
 # Changelog
 
-## next
+## 1.5.13 (Nov 20, 2022)
 
+- Add `backface-visibility: hidden` to cropper image to avoid ghost lines when moving (#982).
+- Remove useless `cropper-hide` class from cropper image.
 - Check whether the parent node exists or not before removing the cropper container.
 
 ## 1.5.12 (Jun 12, 2021)
